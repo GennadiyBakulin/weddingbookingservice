@@ -29,6 +29,7 @@
   </scm>
   <properties>
     <java.version>17</java.version>
+    <commons-collections4.version>4.4</commons-collections4.version>
     <maven-checkstyle-plugin.version>3.5.0</maven-checkstyle-plugin.version>
   </properties>
   <dependencies>
@@ -41,6 +42,11 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
+      <version>${commons-collections4.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
