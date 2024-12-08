@@ -2,7 +2,6 @@ package com.javaacademy.weddingbookingservice.repository;
 
 import com.javaacademy.weddingbookingservice.entity.Booking;
 import com.javaacademy.weddingbookingservice.storage.BookingStorage;
-import java.time.Month;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -13,7 +12,7 @@ public class BookingRepository {
 
   private final BookingStorage bookingStorage;
 
-  public List<Booking> getBookingForMonth(Month month) {
+  public List<Booking> getBookingForMonth(int month) {
     return bookingStorage.getBookingForMonth(month);
   }
 
@@ -21,7 +20,7 @@ public class BookingRepository {
     bookingStorage.saveBooking(booking);
   }
 
-  public int getCountBookingDayOfMonth(Month month) {
+  public int getCountBookingDayOfMonth(int month) {
     return bookingStorage.getCountBookingDayOfMonth(month);
   }
 

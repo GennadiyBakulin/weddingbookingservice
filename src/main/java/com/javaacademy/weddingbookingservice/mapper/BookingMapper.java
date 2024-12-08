@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 public class BookingMapper {
 
   public BookingDto convertToDto(Booking booking) {
-    return new BookingDto(booking.getMonthDay().getMonthValue(),
-        booking.getMonthDay().getDayOfMonth(), booking.isBooked());
+    return new BookingDto(booking.getMonth(),
+        booking.getDay(), booking.isBooked());
   }
 
 }
