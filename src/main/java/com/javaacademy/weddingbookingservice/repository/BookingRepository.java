@@ -12,16 +12,15 @@ public class BookingRepository {
 
   private final BookingStorage bookingStorage;
 
-  public List<Booking> getBookingForMonth(int month) {
-    return bookingStorage.getBookingForMonth(month);
+  public void save(Booking booking) {
+    bookingStorage.getData().put(booking.getMonth(), booking);
   }
 
-  public void saveBooking(Booking booking) {
-    bookingStorage.saveBooking(booking);
+  public List<Booking> getByMonthNumber(int month) {
+    return bookingStorage.getData().get(month).stream().toList();
   }
 
-  public int getCountBookingDayOfMonth(int month) {
-    return bookingStorage.getCountBookingDayOfMonth(month);
+  public int getCountDayOfMonth(int month) {
+    return bookingStorage.getData().get(month).size();
   }
-
 }

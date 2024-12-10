@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class BookingDto {
+public class BookingDtoRp {
 
   private int monthNumber;
   private int dayNumber;
