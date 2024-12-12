@@ -3,7 +3,6 @@ package com.javaacademy.weddingbookingservice.controller;
 import com.javaacademy.weddingbookingservice.dto.BookingDtoRp;
 import com.javaacademy.weddingbookingservice.dto.BookingDtoRq;
 import com.javaacademy.weddingbookingservice.service.BookingService;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import lombok.RequiredArgsConstructor;
@@ -38,8 +37,6 @@ public class BookingController {
 
   @GetMapping("/month/{monthNumber}/free")
   public Map<String, Integer> getCountDayOfMonth(@PathVariable int monthNumber) {
-    Map<String, Integer> map = new HashMap<>();
-    map.put("count", bookingService.getCountDayOfMonth(monthNumber));
-    return map;
+    return Map.of("count", bookingService.getCountDayOfMonth(monthNumber));
   }
 }
