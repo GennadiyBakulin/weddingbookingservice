@@ -26,6 +26,6 @@ public class BookingService {
   }
 
   public int getCountDayOfMonth(int monthNumber) {
-    return bookingRepository.getCountDayOfMonth(monthNumber);
+    return bookingRepository.getByMonthNumber(monthNumber).size();
   }
 }

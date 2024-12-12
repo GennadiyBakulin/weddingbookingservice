@@ -23,8 +23,4 @@ public class BookingRepository {
   public List<Booking> getByMonthNumber(int month) {
     return bookingStorage.getData().getOrDefault(month, new ArrayList<>());
   }
-
-  public int getCountDayOfMonth(int month) {
-    return getByMonthNumber(month).size();
-  }
 }
